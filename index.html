@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+              });
+            } 
+          });
+        });
+        </script>
+</head>
+<body>   
+    <div class="navbar" id="myHeader">
+        <div class="logo"> MY LIFE WEBSITE </div>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#info"> My Info </a></li>
+                    <li><a href="#skill"> My Skill </a></li>
+                    <li><a href="#experience"> My Experience </a></li> 
+                    <li><a href="#gallery"> GALLERY </a></li>
+                </ul>
+        </div>
+    <div class="banner" id="home">
+    
+     
+            <div class="content">
+                <h1> MY PORTFOLIO </h1>
+            </div>
+        </div>
+    <!-- My info -->
+
+    <div class="about-section" id="info">
+        <div class="heading">
+            <h1>MY INFO</h1>
+            <p>This page Contains MY INFORMATION</p>
+        </div>
+        <div class="container">
+            <section class="about">
+                <div class="about-image">
+                    <img src="img/sar.jpg">
+                </div>
+                <div class="about-content">
+                    <h2>SARAH JOY SOMBRIA</h2>
+                    <p>My name is Sarah Joy D. Sombria. I live in Brgy. Minanga Duenas Iloilo, My age is 21. I have one sister and one brother. 
+                    </p>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- MY SKILLS-->
+
+    <div class="main-skills" id="skill">
+        <div class="main-header">
+            <div class="header">
+                <h1>MY SKILLS</h1>
+                <p>This page Contains My Skill in Website</p>
+            </div>
+        </div>
+        <section class="main-abouts">
+            <div class="main-imgs">
+                <img src="img/sk.gif">
+            </div>
+            <div class="main-about-content">
+             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+            <script>
+                var xValues = ["HTML", "CSS", "PHP", "JAVASCRIPT", "JAVA"];
+                var yValues = [55, 45, 43, 30, 23];
+                var barColors = ["black", "violet","orange","yellow","brown"];
+
+                new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                    display: true,
+                    text: "MY SKILLS IN PROGRAMMING"
+                    }
+                }
+                });
+            </script>
+        </section>
+
+    </div>
+
+    <!-- MY EXPERIENCE-->
+    <div class="fold-section" id="experience">
+        <div class="fold-content">
+            <div class="lock">
+                <h2> MY EXPERIECE </h2>
+                <p>ALL ABOUT MY EXPERIENCE </p>
+            </div>
+
+            <div class="wallets">
+                <div class="wallet">
+                
+
+                    <div class="articles">
+                        <h4>MY COLLEGE LIFE?</h4>
+                        <p> COLLEGE LIFE </br></br>
+                            College life is quite challenging, and it helps people to get a lot of experience. The experience in college shapes people’s lives and ensures that they can take responsibility for their actions. Students do come to realize their potential in college, and they tend to learn more about themselves while in college. The challenges they experience help them to grow into mature people in society. Also, there is a lesson that people learn about happiness and how to counter problems in life. Indeed college life is a good experience in people’s lives because people learn a lot. This paper will focus on the lesson I learned about my life and college life, how college had helped me to grow, and lessons I learned about happiness and life in general.</a></p>
+                    </div>
+
+                
+                </div>
+
+                    <div class="wallet">
+                       
+
+                        <div class="articles">
+                            <h4> MY ARDUINO </h4>
+                            <p>ARDUINO</br></br>
+                               My experience in Arduino first its kind of hard. Because we make a system. Yes, hard but if their is a guidance of the teacher its easy. By learning Arduino, kids can develop important skills such as problem-solving, critical thinking, and creativity. They can also learn to use technology to solve real-world problems, inspiring them to become inventors and innovators.</a></p>
+                        </div>
+
+                    
+                   
+                    </div>
+                        <div class="wallet">
+                          
+
+                            <div class="articles">
+                                <h4> MY EXPERIECE IN MAKING CODES</h4>
+                                <p> COMPUTER </br></br>
+                                    To answer the question 'What is programming experience? ', it's the projects, internships or previous responsibilities you've had where you've applied your programming skills. Programming experience comprises a tech expert's background in designing computer programs in various languages.</a> </p>
+                            </div>
+
+                      
+                        </div>
+            </div>
+        </div>
+    </div> 
+
+    <!--gallery code-->
+
+    <div class="gallery" id="gallery">
+        <input type="radio" name="photos" id="check1" checked> 
+        <input type="radio" name="photos" id="check2"> 
+        <input type="radio" name="photos" id="check3"> 
+        <input type="radio" name="photos" id="check4">
+        
+        <div class="gallery-container"> 
+            <h1> OUR PHOTO GALLERY </h1> 
+            <div class="top-content"> 
+                <h3>Photo Gallery </h3>
+                <label for="check1"> All Photos</label> 
+                <label for="check2"> Solo Photos</label> 
+                <label for="check3"> Bonding Photos</label>
+                <label for="check4"> Outing Photos</label>
+            </div>
+            <div class="photo-gallery">
+                <div class="pic Events">
+                    <img src="img/s1.jpg">
+                </div>
+                <div class="pic Bonding"> 
+                    <img src="img/s2.jpg"> 
+                </div>
+                <div class="pic Outing">  
+                    <img src="img/s3.jpg"> 
+                </div> 
+                <div class="pic Events">
+                    <img src="img/s5.jpg">
+                </div>
+                <div class="pic Bonding"> 
+                    <img src="img/s6.jpg"> 
+                </div>
+                <div class="pic Outing">  
+                    <img src="img/s7.jpg"> 
+                </div>  
+                <div class="pic Events">
+                    <img src="img/s8.jpg">
+                </div>
+                <div class="pic Bonding"> 
+                    <img src="img/s9.jpg"> 
+                </div>
+                <div class="pic Outing">  
+                    <img src="img/s10.jpg"> 
+                </div>  
+                <div class="pic Events">
+                    <img src="img/s11.jpg">
+                </div>
+                <div class="pic Bonding"> 
+                    <img src="img/s12.jpg"> 
+                </div>
+                <div class="pic Outing">  
+                    <img src="img/s13.jpg"> 
+                </div>  
+                
+            </div>
+        </div>
+    </div> 
+
+
+<!--my footer-->
+
+<div class="footer-basic">
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fa fa-facebook-official"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <p class="copyright">sarportfolio</p>
+        </div>
+    </footer>
+
+
+    <a href="#home" id="myBtn" title="Go to top"><i class="fa fa-home"></i></a>
+
+<Script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    </Script>
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
